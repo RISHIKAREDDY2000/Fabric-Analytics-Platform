@@ -1,0 +1,15 @@
+{
+  "name": "Ingest_API_To_OneLake",
+  "properties": {
+    "activities": [
+      {
+        "name": "Copy_API_To_OneLake",
+        "type": "Copy",
+        "typeProperties": {
+          "source": { "type": "RestSource" },
+          "sink": { "type": "DelimitedTextSink" }
+        }
+      }
+    ]
+  }
+}
