@@ -1,0 +1,21 @@
+{
+  "name": "Ingest_ADLS_To_OneLake",
+  "properties": {
+    "activities": [
+      {
+        "name": "Copy_ADLS_To_OneLake",
+        "type": "Copy",
+        "inputs": [
+          { "referenceName": "ADLS_Source", "type": "DatasetReference" }
+        ],
+        "outputs": [
+          { "referenceName": "OneLake_Raw", "type": "DatasetReference" }
+        ],
+        "typeProperties": {
+          "source": { "type": "DelimitedTextSource" },
+          "sink": { "type": "DelimitedTextSink" }
+        }
+      }
+    ]
+  }
+}
